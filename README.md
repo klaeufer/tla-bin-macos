@@ -1,24 +1,29 @@
-# tla-bin
+# tla-bin-macos
 
 tla-bin is a wrapper around https://github.com/tlaplus/tlaplus that provides
 command line binaries for pcal, tlc, tlatex and sany, making automation around
 TLA+ easy.  Also provides a binary that starts the TLA+ REPL.
 
+tla-bin-macos is a fork of tla-bin that assumes that the TLA+ Toolbox is already installed in /Applications.
+
 ## Installation
 
+### Install the binaries in /opt/tla/bin
+
 ```
-$ git clone https://github.com/pmer/tla-bin.git
-$ cd tla-bin
-$ ./download_or_update_tla.sh
-$ sudo ./install.sh
+$ git clone https://github.com/klaeufer/tla-bin-macos.git
+$ cd tla-bin-macos
+$ sudo mkdir /opt/tla
+$ sudo cp -a bin /opt/tla
 ```
 
-The `download_or_update_tla.sh` script takes an optional `--nightly` argument.
-If passed, it will download the nightly CI build of TLA+ rather than the latest
-release.
+### Add /opt/tla/bin to PATH
 
-The `install.sh` script takes an optional location argument.  By default,
-binaries and the tla jar file are installed below `/usr/local`.
+For the current shell session:
+
+PATH=/opt/tla/bin:$PATH
+
+To add `/opt/tla/bin` to your path permanently, use the appropriate steps for your shell.
 
 ## Usage
 
