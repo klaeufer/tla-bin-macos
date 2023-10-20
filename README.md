@@ -21,7 +21,9 @@ $ sudo cp -a bin /opt/tla
 
 For the current shell session:
 
+```
 PATH=/opt/tla/bin:$PATH
+```
 
 To add `/opt/tla/bin` to your path permanently, use the appropriate steps for your shell.
 
